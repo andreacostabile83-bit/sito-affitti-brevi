@@ -1,11 +1,16 @@
+export const metadata = {
+  title: "Gestione affitti brevi Roma | AC Domus Affitti",
+  description:
+    "Gestione professionale affitti brevi a Roma. Massimizziamo il rendimento del tuo immobile con strategie avanzate e pricing dinamico.",
+};
 export default function LandingPage() {
   const services = [
     {
-      title: "Gestione completa affitti brevi",
+      title: "Gestione completa affitti brevi a Roma",
       desc: "Seguo l’intero processo operativo: strategia, pubblicazione annunci, pricing, comunicazione ospiti, check-in, coordinamento pulizie e ottimizzazione della redditività.",
     },
     {
-      title: "Consulenza strategica per proprietari",
+      title: "Consulenza per affitti brevi in tutta Italia",
       desc: "Analizzo il tuo immobile e ti aiuto a capire se ha davvero più potenziale in affitto breve rispetto a una locazione tradizionale.",
     },
     {
@@ -79,14 +84,15 @@ export default function LandingPage() {
             <img
               src="/logo.png"
               alt="AC Domus Affitti"
-              className="h-16 w-auto sm:h-20"
+              className="h-20 w-auto sm:h-24"
             />
             <div className="leading-tight">
               <p className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
                 AC Domus Affitti
               </p>
               <p className="text-sm text-neutral-500 sm:text-base">
-                Gestione professionale affitti brevi
+                Gestione affitti brevi:aumenta il rendimento del tuo immobile.
+
               </p>
             </div>
           </div>
@@ -116,14 +122,12 @@ export default function LandingPage() {
                 Roma · Gestione professionale · Consulenza strategica
               </p>
 
-              <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Scopri quanto può rendere davvero il tuo immobile a Roma.
+              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                Gestione affitti brevi a Roma: aumenta il rendimento del tuo immobile
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
-                Aiuto proprietari di immobili a capire quanto possono guadagnare
-                davvero con una gestione turistica professionale, senza
-                improvvisazione e senza gestione confusa.
+                Offro gestione affitti brevi a Roma per proprietari che vogliono aumentare il rendimento del proprio immobile con strategie professionali, pricing dinamico e ottimizzazione completa degli annunci.
               </p>
 
               <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-600">
@@ -204,7 +208,7 @@ export default function LandingPage() {
             Servizi
           </p>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Cosa faccio concretamente
+            Servizi di gestione affitti brevi in Italia
           </h2>
           <p className="mt-4 text-neutral-600">
             Non mi limito a pubblicare un annuncio. Lavoro per costruire
@@ -224,10 +228,35 @@ export default function LandingPage() {
           ))}
         </div>
       </section>
+<div className="mt-16 p-8 rounded-3xl bg-neutral-900 text-white">
+  <h2 className="text-2xl font-semibold">
+    Vuoi capire quanto può rendere davvero il tuo immobile?
+  </h2>
+
+  <p className="mt-3 text-white/70">
+    Analizzo gratuitamente il tuo immobile e ti mostro il potenziale reale in affitto breve, con numeri concreti.
+  </p>
+
+  <a
+  href="https://wa.me/393286824515?text=Ciao%2C%20vorrei%20ricevere%20una%20consulenza%20per%20affitti%20brevi"
+  target="_blank"
+  className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-xl font-medium"
+>
+  Richiedi analisi gratuita
+</a>
+</div>
+
 
       <section id="portfolio" className="border-y border-neutral-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl">
+<h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl mt-16">
+  Gestione affitti brevi professionale: perché conviene davvero
+</h2>
+
+<p className="mt-4 text-neutral-600 max-w-2xl">
+  Affidarsi a un professionista nella gestione degli affitti brevi significa aumentare il rendimento del proprio immobile, ridurre lo stress operativo e ottimizzare ogni fase: dalla pubblicazione dell’annuncio al pricing dinamico, fino alla gestione degli ospiti.
+</p>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
               Portfolio
             </p>
