@@ -589,7 +589,7 @@ export default function LandingPage() {
 
               <div className="mt-6 space-y-3 text-sm">
                 <div className="rounded-2xl border border-neutral-200 px-4 py-3">
-                  Email: info@domusaurea.it
+                  Email: info@acdomusaffitti.it
                 </div>
                 <div className="rounded-2xl border border-neutral-200 px-4 py-3">
                   Telefono / WhatsApp: +39 3286824515
@@ -607,7 +607,7 @@ export default function LandingPage() {
                   Richiedi analisi gratuita
                 </a>
                 <a
-                  href="mailto:info@domusaurea.it"
+                  href="mailto:info@domusaffitti.it"
                   className="inline-block rounded-2xl border border-neutral-300 px-6 py-3 text-center text-sm font-medium transition hover:bg-neutral-100"
                 >
                   Scrivimi via email
