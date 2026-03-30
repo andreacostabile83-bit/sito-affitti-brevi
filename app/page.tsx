@@ -78,12 +78,12 @@ export default function LandingPage() {
           <div className="flex items-center gap-4">
             <img
               src="/logo.png"
-              alt="AC Domus Aurea"
+              alt="AC Domus Affitti"
               className="h-16 w-auto sm:h-20"
             />
             <div className="leading-tight">
               <p className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
-                AC Domus Aurea
+                AC Domus Affitti
               </p>
               <p className="text-sm text-neutral-500 sm:text-base">
                 Gestione professionale affitti brevi
