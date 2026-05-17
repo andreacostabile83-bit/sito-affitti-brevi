@@ -546,6 +546,61 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="bg-neutral-900 text-white">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold sm:text-4xl">
+              I numeri parlano
+            </h2>
+            <p className="mt-3 text-neutral-400">
+              Dati reali degli annunci gestiti da AC Domus Affitti — aprile/maggio 2026
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { value: "4.94 ⭐", label: "Valutazione media ospiti" },
+              { value: "83.5%", label: "Tasso di occupazione" },
+              { value: "+30.6%", label: "Rispetto agli annunci simili" },
+              { value: "93.5%", label: "Recensioni a 5 stelle" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-3xl border border-white/10 bg-white/5 px-6 py-8"
+              >
+                <p className="text-4xl font-semibold text-amber-400">
+                  {stat.value}
+                </p>
+                <p className="mt-3 text-sm text-white/70">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {[
+              { src: "/dashboard-qualita.png", caption: "Qualità" },
+              { src: "/dashboard-occupazione.png", caption: "Occupazione" },
+              { src: "/dashboard-visibilita.png", caption: "Visibilità" },
+            ].map((img) => (
+              <div key={img.caption} className="overflow-hidden rounded-2xl">
+                <img
+                  src={img.src}
+                  alt={`Dashboard ${img.caption}`}
+                  className="w-full object-cover"
+                />
+                <p className="mt-2 text-center text-sm text-neutral-400">
+                  {img.caption}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-xs text-neutral-500">
+            Screenshot verificabili direttamente dalla piattaforma Airbnb
+          </p>
+        </div>
+      </section>
+
       <section className="border-y border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="max-w-2xl">
