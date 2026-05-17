@@ -61,6 +61,24 @@ export default function LandingPage() {
     },
   ];
 
+  const reviews = [
+    {
+      name: "Andrea B.",
+      city: "Roma",
+      text: "Avevo un appartamento affittato a lungo termine a €1.000 al mese. Andrea mi ha convinto a provare gli affitti brevi e si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.",
+    },
+    {
+      name: "Sonia B.",
+      city: "Roma",
+      text: "Prima affittavo il mio appartamento a €700 al mese e pensavo fosse la soluzione migliore. Andrea mi ha aiutato a capire il potenziale degli affitti brevi, mi ha seguito passo passo — dalla burocrazia alla pubblicazione dell'annuncio — e i risultati mi hanno dato ragione. Consiglio a chiunque abbia un immobile di confrontarsi con lui prima di prendere decisioni.",
+    },
+    {
+      name: "Nadia T.",
+      city: "Roma",
+      text: "Andrea mi ha insegnato tutto sulla gestione degli affitti brevi: come impostare l'annuncio, le foto, i prezzi, come rispondere agli ospiti. Oggi gestisco il mio appartamento in autonomia completa e i risultati parlano da soli. Un percorso che mi ha cambiato il modo di vedere il mio immobile.",
+    },
+  ];
+
   const faqs = [
     {
       q: "Come faccio a capire se il mio immobile conviene in affitto breve?",
@@ -518,6 +536,37 @@ export default function LandingPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-neutral-200 bg-neutral-50">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
+              Recensioni
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+              Cosa dicono i proprietari
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {reviews.map((review) => (
+              <div
+                key={review.name}
+                className="flex flex-col rounded-3xl border border-neutral-200 bg-white p-7 shadow-sm"
+              >
+                <div className="text-lg text-amber-400">★★★★★</div>
+                <p className="mt-4 flex-1 leading-7 text-neutral-600">
+                  {review.text}
+                </p>
+                <div className="mt-6 border-t border-neutral-100 pt-4">
+                  <p className="font-semibold text-neutral-900">{review.name}</p>
+                  <p className="text-sm text-neutral-500">{review.city}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
