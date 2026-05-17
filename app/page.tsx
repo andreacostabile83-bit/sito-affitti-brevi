@@ -48,16 +48,19 @@ export default function LandingPage() {
       n: "01",
       title: "Analisi",
       desc: "Studio immobile, zona, costi, target e potenziale reale di rendimento.",
+      subtitle: "Zona, costi, target e potenziale reale",
     },
     {
       n: "02",
       title: "Strategia",
       desc: "Definisco cosa migliorare davvero: presentazione, pricing, impostazioni e posizionamento.",
+      subtitle: "Presentazione, pricing e posizionamento",
     },
     {
       n: "03",
       title: "Azione",
       desc: "Possiamo lavorare in consulenza oppure in gestione diretta, in base al caso.",
+      subtitle: "Consulenza o gestione diretta, in base al tuo caso",
     },
   ];
 
@@ -226,7 +229,7 @@ export default function LandingPage() {
             Servizi
           </p>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Servizi di gestione affitti brevi in Italia
+            Servizi di gestione affitti brevi a Roma
           </h2>
           <p className="mt-4 text-neutral-600">
             Non mi limito a pubblicare un annuncio. Lavoro per costruire
@@ -532,6 +535,9 @@ export default function LandingPage() {
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
                   <p className="mt-3 leading-7 text-neutral-600">
                     {step.desc}
+                  </p>
+                  <p className="mt-4 text-sm font-medium text-neutral-500">
+                    {step.subtitle}
                   </p>
                 </div>
               ))}
