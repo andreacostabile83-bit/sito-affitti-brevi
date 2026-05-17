@@ -115,7 +115,7 @@ export default function LandingPage() {
       </header>
 
       <section className="relative overflow-hidden border-b border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <p className="mb-4 inline-flex rounded-full border border-neutral-300 px-4 py-1 text-sm font-medium">
@@ -202,7 +202,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="servizi" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="servizi" className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
             Servizi
@@ -228,7 +228,7 @@ export default function LandingPage() {
           ))}
         </div>
       </section>
-<div className="mt-16 p-8 rounded-3xl bg-neutral-900 text-white">
+<div className="mt-6 p-8 rounded-3xl bg-neutral-900 text-white">
   <h2 className="text-2xl font-semibold">
     Vuoi capire quanto può rendere davvero il tuo immobile?
   </h2>
@@ -248,9 +248,9 @@ export default function LandingPage() {
 
 
       <section id="portfolio" className="border-y border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="max-w-2xl">
-<h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl mt-16">
+<h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl mt-4">
   Gestione affitti brevi professionale: perché conviene davvero
 </h2>
 
@@ -324,7 +324,7 @@ export default function LandingPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
@@ -364,7 +364,7 @@ export default function LandingPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
               Risultati
@@ -413,7 +413,7 @@ export default function LandingPage() {
       </section>
 
       <section id="guadagno" className="border-y border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
               Confronto rendimento
@@ -462,35 +462,43 @@ export default function LandingPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
-                Chi sono
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                Dietro il sito c’è un lavoro concreto.
-              </h2>
-              <p className="mt-4 leading-7 text-neutral-600">
-                Mi occupo di affitti brevi con un approccio pratico e orientato
-                al rendimento. Non mi interessa riempire un annuncio e basta:
-                mi interessa capire se l’immobile può produrre di più, e come.
-              </p>
-              <p className="mt-4 leading-7 text-neutral-600">
-                Lavoro sulla presentazione, sulla strategia e sulla gestione
-                per aiutare i proprietari a prendere decisioni più consapevoli,
-                con un’impostazione professionale e ordinata.
-              </p>
+              <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+                <img
+                  src="/andrea.jpg"
+                  alt="Andrea Costabile"
+                  className="h-48 w-48 flex-shrink-0 rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                    Chi sono
+                  </p>
+                  <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                    Dietro il sito c’è un lavoro concreto.
+                  </h2>
+                  <p className="mt-4 leading-7 text-neutral-600">
+                    Ho iniziato dal basso. Davvero. Due anni fa ho acquistato il mio primo appartamento in una zona periferica di Roma. Ho fatto le pulizie con le mie mani, i check-in di persona, imparato ogni dettaglio dall’interno. Piano piano ho automatizzato tutto: self check-in, messaggi automatici, pulizie esternalizzate.
+                  </p>
+                  <p className="mt-4 leading-7 text-neutral-600">
+                    Oggi gestisco tre immobili a Roma. Per un proprietario ho trasformato un contratto da €1.000/mese in €2.200 netti — solo nel primo mese.
+                  </p>
+                  <p className="mt-4 leading-7 text-neutral-600">
+                    Non offro consulenze teoriche. Conosco questo lavoro perché l’ho fatto, l’ho insegnato e continuo a farlo ogni giorno.
+                  </p>
 
-              <div className="mt-8 grid gap-3">
-                {freeAnalysis.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700"
-                  >
-                    {item}
+                  <div className="mt-8 grid gap-3">
+                    {freeAnalysis.map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700"
+                      >
+                        {item}
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
@@ -515,7 +523,7 @@ export default function LandingPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
               Domande frequenti
@@ -540,7 +548,7 @@ export default function LandingPage() {
       </section>
 
       <section className="bg-neutral-900 text-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">

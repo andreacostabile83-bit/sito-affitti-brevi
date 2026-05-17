@@ -26,9 +26,23 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
+        {/* Verifica Google */}
         <meta
           name="google-site-verification"
           content="JkOV-tYW9AwJe71ayd3rqVmyrpcY3SAb2YCv1uAJKwM"
+        />
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFKGHC9V3R"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YFKGHC9V3R');
+            `,
+          }}
         />
       </head>
 
