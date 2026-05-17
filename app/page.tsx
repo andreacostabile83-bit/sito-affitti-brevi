@@ -467,7 +467,7 @@ export default function LandingPage() {
             <div className="rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm">
               <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
                 <img
-                  src="/andrea.jpg"
+                  src="/Andrea.jpg"
                   alt="Andrea Costabile"
                   className="h-48 w-48 flex-shrink-0 rounded-full object-cover"
                 />
