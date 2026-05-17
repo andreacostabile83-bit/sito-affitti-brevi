@@ -523,11 +523,11 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid items-stretch gap-6 md:grid-cols-3">
               {steps.map((step) => (
                 <div
                   key={step.n}
-                  className="rounded-3xl border border-neutral-200 bg-white p-7 shadow-sm"
+                  className="h-full rounded-3xl border border-neutral-200 bg-white p-7 shadow-sm"
                 >
                   <div className="text-sm font-semibold text-neutral-500">
                     {step.n}
