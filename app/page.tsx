@@ -657,6 +657,33 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="border-y border-neutral-200 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div className="flex justify-center">
+              <img
+                src="/ebook-copertina.jpg"
+                alt="Ebook gratuito affitti brevi"
+                className="w-full max-w-sm rounded-2xl shadow-md"
+              />
+            </div>
+
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<div class="sib-form" style="text-align: center; background-color: #EFF2F7;">
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; background-color:rgba(255,255,255,1); border-width:1px; border-style:solid; border-color:#C0CCD9; border-radius:3px;">
+      <form id="sib-form" method="POST" action="https://ae25f9b0.sibforms.com/serve/MUIFAIemlKvXEy5QAX1JY-cqOBzGlSbxTqdQSTErPcyA3JZsxZywvD5NWxnuvElAJWh_qjbqeuSFDqe4gezIfFNu-JnBNvav--t2QfKu0WLbwyjXrMNnYobSgaatdsFyZrWeyX9fF2yatai_3tATi9Hw5x0k17qeVG1Y_qzpctP0VYndeIVfIGFp6yZUqKTAhwC-bQJgUdMagdPAMQ==">
+      </form>
+    </div>
+  </div>
+</div>`,
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-neutral-900 text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">

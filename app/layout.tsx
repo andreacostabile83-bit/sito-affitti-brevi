@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
         {/* Verifica Google */}
         <meta
           name="google-site-verification"
