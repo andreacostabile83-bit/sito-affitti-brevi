@@ -68,16 +68,22 @@ export default function LandingPage() {
     {
       name: "Andrea B.",
       city: "Roma",
+      initials: "AB",
+      avatarClass: "bg-amber-400 text-white",
       text: "Avevo un appartamento affittato a lungo termine a €1.000 al mese. Andrea mi ha convinto a provare gli affitti brevi e si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.",
     },
     {
       name: "Sonia B.",
       city: "Roma",
+      initials: "SB",
+      avatarClass: "bg-emerald-800 text-white",
       text: "Prima affittavo il mio appartamento a €700 al mese e pensavo fosse la soluzione migliore. Andrea mi ha aiutato a capire il potenziale degli affitti brevi, mi ha seguito passo passo — dalla burocrazia alla pubblicazione dell'annuncio — e i risultati mi hanno dato ragione. Consiglio a chiunque abbia un immobile di confrontarsi con lui prima di prendere decisioni.",
     },
     {
       name: "Nadia T.",
       city: "Roma",
+      initials: "NT",
+      avatarClass: "bg-blue-900 text-white",
       text: "Andrea mi ha insegnato tutto sulla gestione degli affitti brevi: come impostare l'annuncio, le foto, i prezzi, come rispondere agli ospiti. Oggi gestisco il mio appartamento in autonomia completa e i risultati parlano da soli. Un percorso che mi ha cambiato il modo di vedere il mio immobile.",
     },
   ];
@@ -622,9 +628,14 @@ export default function LandingPage() {
                 <p className="mt-4 flex-1 leading-7 text-neutral-600">
                   {review.text}
                 </p>
-                <div className="mt-6 border-t border-neutral-100 pt-4">
-                  <p className="font-semibold text-neutral-900">{review.name}</p>
-                  <p className="text-sm text-neutral-500">{review.city}</p>
+                <div className="mt-6 flex items-center gap-3 border-t border-neutral-100 pt-4">
+                  <div className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold ${review.avatarClass}`}>
+                    {review.initials}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-neutral-900">{review.name}</p>
+                    <p className="text-sm text-neutral-500">{review.city}</p>
+                  </div>
                 </div>
               </div>
             ))}
