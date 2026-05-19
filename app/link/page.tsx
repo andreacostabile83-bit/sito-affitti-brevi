@@ -222,7 +222,7 @@ export default function LinkPage() {
         {/* FOOTER */}
         <div className="footer">
           <div className="flogo">AC Domus Affitti</div>
-          <div className="fsub">Gestione professionale affitti brevi &middot; Roma &middot; acdomusaffitti.it</div>
+          <div className="fsub">{"Gestione professionale affitti brevi \u00b7 Roma \u00b7 acdomusaffitti.it"}</div>
         </div>
       </div>
     </>
