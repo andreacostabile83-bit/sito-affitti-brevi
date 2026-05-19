@@ -68,7 +68,7 @@ export default function LinkPage() {
         {/* HERO */}
         <div className="hero">
           <div className="avatar">
-            <img src="/foto-andrea.jpg" alt="Andrea Costabile" />
+            <img src="/Andrea.jpg" alt="Andrea Costabile" />
           </div>
           <div className="badge">🏠 Property Manager · Roma</div>
           <div className="name">Andrea Costabile</div>
@@ -123,9 +123,9 @@ export default function LinkPage() {
         <div className="sec">
           <div className="sec-ttl">I miei appartamenti</div>
           <div className="gallery">
-            <div className="gitem"><img src="/apt1.jpg" alt="Appartamento 1" /></div>
-            <div className="gitem"><img src="/apt2.jpg" alt="Appartamento 2" /></div>
-            <div className="gitem"><img src="/apt3.jpg" alt="Appartamento 3" /></div>
+            <div className="gitem"><img src="/appartamento1.png" alt="Appartamento 1" /></div>
+            <div className="gitem"><img src="/appartamento2.png" alt="Appartamento 2" /></div>
+            <div className="gitem"><img src="/appartamento3.png" alt="Appartamento 3" /></div>
           </div>
         </div>
 
