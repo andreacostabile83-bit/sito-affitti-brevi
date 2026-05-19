@@ -74,8 +74,22 @@ export default function LinkPage() {
           <div className="name">Andrea Costabile</div>
           <div className="handle">@acdomusaffitti</div>
           <div className="bio">
-            Gestisco il tuo immobile a Roma con gli affitti brevi.<br />
-            Tu incassi di più — senza pensieri.
+            Il tuo immobile può rendere fino al doppio rispetto all&apos;affitto tradizionale.<br />
+            <span style={{color:"#C9A84C",fontWeight:500}}>Zero morosità. Massima cura. In mani sicure.</span>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:7,marginTop:14,textAlign:"left"}}>
+            {[
+              {ico:"✅", title:"Zero morosità", sub:"Niente inquilini morosi"},
+              {ico:"🛡️", title:"Assicurazione", sub:"Tutela da eventuali danni"},
+              {ico:"🧹", title:"Pulizie professionali", sub:"Appartamento sempre curato"},
+              {ico:"🔑", title:"Rientro libero", sub:"Casa tua quando vuoi"},
+            ].map(({ico,title,sub})=>(
+              <div key={title} style={{background:"#1e1e1e",border:"1px solid #2a2a2a",borderRadius:10,padding:"10px 12px",display:"flex",alignItems:"flex-start",gap:8}}>
+                <span style={{fontSize:18}}>{ico}</span>
+                <div><div style={{fontSize:11,fontWeight:600,color:"#fff"}}>{title}</div><div style={{fontSize:10,color:"#777",marginTop:1}}>{sub}</div></div>
+              </div>
+            ))}
+          </div>
           </div>
         </div>
 
