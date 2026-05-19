@@ -70,8 +70,7 @@ export default function LandingPage() {
       city: "Roma",
       initials: "AB",
       avatarClass: "bg-amber-400 text-white",
-      text: "Avevo un appartamento affittato a lungo termine a €1.000 al mese. Andrea mi ha convinto a provare gli affitti brevi e si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.”,
-    },
+text: "Avevo un appartamento affittato a €1.000 al mese. Andrea si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.",    },
     {
       name: "Sonia B.",
       city: "Roma",
