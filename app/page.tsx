@@ -70,7 +70,7 @@ export default function LandingPage() {
       city: "Roma",
       initials: "AB",
       avatarClass: "bg-amber-400 text-white",
-      text: "Avevo un appartamento affittato a lungo termine a €1.000 al mese. Andrea mi ha convinto a provare gli affitti brevi e si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.",
+      text: "Avevo un appartamento affittato a €1.000 al mese. Andrea si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.",
     },
     {
       name: "Sonia B.",
@@ -146,7 +146,7 @@ export default function LandingPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <p className="mb-4 inline-flex rounded-full border border-neutral-300 px-4 py-1 text-sm font-medium">
-                Roma · Gestione professionale · Consulenza strategica
+                Roma e tutta Italia · Gestione professionale · Consulenza strategica
               </p>
 
               <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
@@ -154,7 +154,7 @@ export default function LandingPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
-                Offro gestione affitti brevi a Roma per proprietari che vogliono aumentare il rendimento del proprio immobile con strategie professionali, pricing dinamico e ottimizzazione completa degli annunci.
+                Offro gestione affitti brevi per proprietari che vogliono aumentare il rendimento del proprio immobile con strategie professionali, pricing dinamico e ottimizzazione completa degli annunci. Gestione diretta a Roma, consulenza e gestione online per tutta Italia.
               </p>
 
               <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-600">
@@ -165,7 +165,7 @@ export default function LandingPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20a%20Roma%20e%20vorrei%20capire%20quanto%20potrebbe%20rendere%20con%20una%20gestione%20professionale."
+                  href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20e%20vorrei%20capire%20quanto%20potrebbe%20rendere%20con%20una%20gestione%20professionale."
                   className="rounded-2xl bg-neutral-900 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:opacity-90"
                 >
                   Richiedi analisi gratuita
@@ -201,9 +201,9 @@ export default function LandingPage() {
                   tavolo.
                 </p>
                 <p className="mt-3 text-neutral-600">
-                  Se hai un immobile a Roma e vuoi capire se conviene davvero
+                  Se hai un immobile e vuoi capire se conviene davvero
                   l’affitto breve rispetto a una soluzione tradizionale, qui
-                  trovi un approccio concreto, non improvvisato.
+                  trovi un approccio concreto, non improvvisato. Gestione diretta a Roma, consulenza online per tutta Italia.
                 </p>
               </div>
 
@@ -754,13 +754,13 @@ export default function LandingPage() {
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20a%20Roma%20e%20vorrei%20capire%20se%20pu%C3%B2%20rendere%20di%20pi%C3%B9%20con%20una%20gestione%20professionale."
+                  href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20e%20vorrei%20capire%20se%20pu%C3%B2%20rendere%20di%20pi%C3%B9%20con%20una%20gestione%20professionale."
                   className="inline-block rounded-2xl bg-neutral-900 px-6 py-3 text-center text-sm font-medium text-white transition hover:opacity-90"
                 >
                   Richiedi analisi gratuita
                 </a>
                 <a
-                  href="mailto:info@domusaffitti.it"
+                  href="mailto:info@acdomusaffitti.it"
                   className="inline-block rounded-2xl border border-neutral-300 px-6 py-3 text-center text-sm font-medium transition hover:bg-neutral-100"
                 >
                   Scrivimi via email
@@ -770,6 +770,25 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* Bottone WhatsApp fisso */}
+      <a
+        href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20e%20vorrei%20capire%20se%20pu%C3%B2%20rendere%20di%20pi%C3%B9%20con%20una%20gestione%20professionale."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Scrivimi su WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-xl transition hover:bg-[#1ebe5d]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-5 w-5 shrink-0"
+        >
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.79L2.05 22l5.45-1.43c1.36.74 2.9 1.15 4.54 1.15 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.52 14.13c-.23.64-1.33 1.22-1.84 1.3-.5.08-1.12.11-1.8-.12-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.18-1.13-1.5-1.13-2.87 0-1.36.71-2.03 1-2.33.27-.28.59-.35.79-.35h.56c.18 0 .43-.07.67.51.24.58.83 2.02.9 2.17.07.14.12.31.02.49-.1.18-.15.3-.3.46-.15.16-.32.35-.45.47-.15.13-.31.27-.13.53.18.26.79 1.3 1.7 2.1 1.17 1.05 2.16 1.38 2.46 1.53.3.15.48.12.65-.07.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.72.81 2.01.96.3.15.5.22.57.34.07.12.07.7-.16 1.34z" />
+        </svg>
+        Scrivimi su WhatsApp
+      </a>
     </div>
   );
 }
