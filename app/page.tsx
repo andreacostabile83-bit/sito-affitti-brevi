@@ -132,6 +132,12 @@ export default function LandingPage() {
               Portfolio
             </a>
             <a
+              href="/valutazione-gratuita"
+              className="hidden rounded-xl border border-neutral-300 px-4 py-2 text-sm font-medium transition hover:bg-neutral-100 sm:inline-block"
+            >
+              Valutazione gratuita
+            </a>
+            <a
               href="#contatti"
               className="rounded-xl bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
             >
