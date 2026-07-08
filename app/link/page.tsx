@@ -93,7 +93,7 @@ export default function LinkPage() {
       <div className="page">
         <div className="hero">
           <div className="avatar">
-            <img src="/Andrea.jpg" alt="Andrea Costabile" />
+            <img src="/foto-andrea.jpg" alt="Andrea Costabile" />
           </div>
           <div className="badge">Property Manager Roma</div>
           <div className="name">Andrea Costabile</div>
