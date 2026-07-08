@@ -1,3 +1,5 @@
+import TrackedCtaLink from "./components/TrackedCtaLink";
+
 export const metadata = {
   title: "Gestione affitti brevi Roma | AC Domus Affitti",
   description:
@@ -170,12 +172,14 @@ export default function LandingPage() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
+                <TrackedCtaLink
                   href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20e%20vorrei%20capire%20quanto%20potrebbe%20rendere%20con%20una%20gestione%20professionale."
+                  event="click_richiedi_analisi"
+                  ctaLocation="home_hero_primary"
                   className="rounded-2xl bg-neutral-900 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:opacity-90"
                 >
                   Richiedi analisi gratuita
-                </a>
+                </TrackedCtaLink>
 
                 <a
                   href="#guadagno"
@@ -270,13 +274,15 @@ export default function LandingPage() {
     Analizzo gratuitamente il tuo immobile e ti mostro il potenziale reale in affitto breve, con numeri concreti.
   </p>
 
-  <a
+  <TrackedCtaLink
   href="https://wa.me/393286824515?text=Ciao%2C%20vorrei%20ricevere%20una%20consulenza%20per%20affitti%20brevi"
   target="_blank"
+  event="click_richiedi_analisi"
+  ctaLocation="home_mid_cta"
   className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-xl font-medium"
 >
   Richiedi analisi gratuita
-</a>
+</TrackedCtaLink>
 </div>
 
 
@@ -759,12 +765,14 @@ export default function LandingPage() {
               </div>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
+                <TrackedCtaLink
                   href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20e%20vorrei%20capire%20se%20pu%C3%B2%20rendere%20di%20pi%C3%B9%20con%20una%20gestione%20professionale."
+                  event="click_richiedi_analisi"
+                  ctaLocation="home_final_primary"
                   className="inline-block rounded-2xl bg-neutral-900 px-6 py-3 text-center text-sm font-medium text-white transition hover:opacity-90"
                 >
                   Richiedi analisi gratuita
-                </a>
+                </TrackedCtaLink>
                 <a
                   href="mailto:info@acdomusaffitti.it"
                   className="inline-block rounded-2xl border border-neutral-300 px-6 py-3 text-center text-sm font-medium transition hover:bg-neutral-100"
@@ -778,11 +786,13 @@ export default function LandingPage() {
       </section>
 
       {/* Bottone WhatsApp fisso */}
-      <a
+      <TrackedCtaLink
         href="https://wa.me/393286824515?text=Ciao%20Andrea,%20ho%20un%20immobile%20e%20vorrei%20capire%20se%20pu%C3%B2%20rendere%20di%20pi%C3%B9%20con%20una%20gestione%20professionale."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Scrivimi su WhatsApp"
+        event="click_whatsapp"
+        ctaLocation="home_floating_button"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-xl transition hover:bg-[#1ebe5d]"
       >
         <svg
@@ -794,7 +804,7 @@ export default function LandingPage() {
           <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.79L2.05 22l5.45-1.43c1.36.74 2.9 1.15 4.54 1.15 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.52 14.13c-.23.64-1.33 1.22-1.84 1.3-.5.08-1.12.11-1.8-.12-.42-.13-.95-.31-1.63-.61-2.87-1.24-4.74-4.12-4.88-4.31-.14-.18-1.13-1.5-1.13-2.87 0-1.36.71-2.03 1-2.33.27-.28.59-.35.79-.35h.56c.18 0 .43-.07.67.51.24.58.83 2.02.9 2.17.07.14.12.31.02.49-.1.18-.15.3-.3.46-.15.16-.32.35-.45.47-.15.13-.31.27-.13.53.18.26.79 1.3 1.7 2.1 1.17 1.05 2.16 1.38 2.46 1.53.3.15.48.12.65-.07.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.27.1 1.72.81 2.01.96.3.15.5.22.57.34.07.12.07.7-.16 1.34z" />
         </svg>
         Scrivimi su WhatsApp
-      </a>
+      </TrackedCtaLink>
     </div>
   );
 }

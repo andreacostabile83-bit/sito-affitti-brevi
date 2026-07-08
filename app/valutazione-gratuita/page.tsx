@@ -1,4 +1,4 @@
-import TrackedWhatsAppLink from "./TrackedWhatsAppLink";
+import TrackedCtaLink from "../components/TrackedCtaLink";
 
 export const metadata = {
   title: "Valutazione gratuita affitti brevi Roma | AC Domus Affitti",
@@ -113,25 +113,27 @@ export default function ValutazioneGratuitaPage() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <TrackedWhatsAppLink
+                <TrackedCtaLink
                   href={waLink(
                     "Ciao Andrea, ho un immobile a Roma e vorrei richiedere l'analisi gratuita per capire quanto potrebbe rendere."
                   )}
-                  ctaLocation="hero_primary"
+                  event="click_richiedi_analisi"
+                  ctaLocation="valutazione_hero_primary"
                   className="rounded-2xl bg-neutral-900 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:opacity-90"
                 >
                   Richiedi la tua analisi gratuita
-                </TrackedWhatsAppLink>
+                </TrackedCtaLink>
 
-                <TrackedWhatsAppLink
+                <TrackedCtaLink
                   href={waLink(
                     "Ciao Andrea, vorrei scriverti per parlare del mio immobile a Roma."
                   )}
-                  ctaLocation="hero_secondary"
+                  event="click_whatsapp"
+                  ctaLocation="valutazione_hero_secondary"
                   className="rounded-2xl border border-neutral-300 px-6 py-3 text-center text-sm font-medium transition hover:bg-neutral-100"
                 >
                   Scrivimi su WhatsApp
-                </TrackedWhatsAppLink>
+                </TrackedCtaLink>
               </div>
             </div>
 
@@ -374,25 +376,27 @@ export default function ValutazioneGratuitaPage() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <TrackedWhatsAppLink
+            <TrackedCtaLink
               href={waLink(
                 "Ciao Andrea, ho letto la pagina di valutazione gratuita e vorrei richiedere l'analisi per il mio immobile a Roma."
               )}
-              ctaLocation="final_primary"
+              event="click_richiedi_analisi"
+              ctaLocation="valutazione_final_primary"
               className="rounded-2xl bg-white px-6 py-3 text-center text-sm font-medium text-neutral-900 shadow-sm transition hover:opacity-90"
             >
               Richiedi la tua analisi gratuita
-            </TrackedWhatsAppLink>
+            </TrackedCtaLink>
 
-            <TrackedWhatsAppLink
+            <TrackedCtaLink
               href={waLink(
                 "Ciao Andrea, vorrei scriverti direttamente per parlare del mio immobile a Roma."
               )}
-              ctaLocation="final_secondary"
+              event="click_whatsapp"
+              ctaLocation="valutazione_final_secondary"
               className="rounded-2xl border border-white/30 px-6 py-3 text-center text-sm font-medium text-white transition hover:bg-white/10"
             >
               Oppure scrivimi direttamente su WhatsApp
-            </TrackedWhatsAppLink>
+            </TrackedCtaLink>
           </div>
         </div>
       </section>
