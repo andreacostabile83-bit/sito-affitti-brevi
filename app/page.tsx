@@ -203,8 +203,8 @@ export default function LandingPage() {
                   Per chi è questo servizio
                 </p>
                 <p className="mt-3 text-2xl font-semibold">
-                  Proprietari che vogliono capire se stanno lasciando soldi sul
-                  tavolo.
+                  Proprietari che vogliono sapere se il loro immobile ha un
+                  potenziale di rendimento superiore.
                 </p>
                 <p className="mt-3 text-neutral-600">
                   Se hai un immobile e vuoi capire se conviene davvero
