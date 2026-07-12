@@ -638,7 +638,7 @@ export default function LandingPage() {
               >
                 <div className="text-lg text-amber-400">★★★★★</div>
                 <p className="mt-4 flex-1 leading-7 text-neutral-600">
-                  "{review.text}"
+                  &quot;{review.text}&quot;
                 </p>
                 <div className="mt-6 flex items-center gap-3 border-t border-neutral-100 pt-4">
                   <div className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold ${review.avatarClass}`}>
