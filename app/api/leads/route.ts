@@ -165,8 +165,8 @@ async function sendLeadEmail(clean: ReturnType<typeof validate>["clean"], utm: {
   }
 
   const notifyTo = process.env.LEAD_NOTIFICATION_EMAIL || "info@acdomusaffitti.it";
-  const fromEmail = process.env.LEAD_FROM_EMAIL || "no-reply@acdomusaffitti.it";
-  const fromName = process.env.LEAD_FROM_NAME || "Sito AC Domus Affitti";
+  const fromEmail = process.env.LEAD_FROM_EMAIL || "andrea.costabile83@gmail.com";
+  const fromName = process.env.LEAD_FROM_NAME || "AC Domus Affitti";
 
   const utmSummary =
     [
