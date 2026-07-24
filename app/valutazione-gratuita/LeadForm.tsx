@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -179,6 +180,7 @@ export default function LeadForm() {
 
       setStatus("success");
       trackEvent("form_analisi_submitted");
+      window.fbq?.("track", "Lead");
     } catch {
       setStatus("error");
     }

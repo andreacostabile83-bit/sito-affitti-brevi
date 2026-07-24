@@ -3,8 +3,11 @@
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
+
+const WHATSAPP_EVENTS = new Set(["click_whatsapp", "click_whatsapp_analisi"]);
 
 function getUtmParams() {
   const params = new URLSearchParams(window.location.search);
@@ -56,6 +59,9 @@ export default function TrackedCtaLink({
           source,
           ...getUtmParams(),
         });
+        if (WHATSAPP_EVENTS.has(event)) {
+          window.fbq?.("track", "Contact");
+        }
       }}
     >
       {children}
