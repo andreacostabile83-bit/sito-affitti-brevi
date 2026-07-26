@@ -89,6 +89,9 @@ export default function LeadForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const hasStartedRef = useRef(false);
+  // Garantisce che gli eventi di conversione (Meta Lead + GA4 generate_lead)
+  // vengano inviati una sola volta per sessione di compilazione.
+  const hasTrackedLeadRef = useRef(false);
 
   function handleFirstInteraction() {
     if (hasStartedRef.current) return;
@@ -180,7 +183,14 @@ export default function LeadForm() {
 
       setStatus("success");
       trackEvent("form_analisi_submitted");
-      window.fbq?.("track", "Lead");
+
+      // Eventi di conversione: inviati SOLO qui, dopo che il server ha
+      // confermato la registrazione della richiesta (res.ok), una sola volta.
+      if (!hasTrackedLeadRef.current) {
+        hasTrackedLeadRef.current = true;
+        window.fbq?.("track", "Lead");
+        trackEvent("generate_lead");
+      }
     } catch {
       setStatus("error");
     }
