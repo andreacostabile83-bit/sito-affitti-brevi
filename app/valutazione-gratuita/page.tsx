@@ -5,6 +5,9 @@ export const metadata = {
   title: "Valutazione gratuita affitti brevi Roma | AC Domus Affitti",
   description:
     "Analisi gratuita e senza impegno: scopri quanto può rendere il tuo immobile a Roma con gli affitti brevi rispetto alla locazione tradizionale, con dati reali della tua zona.",
+  alternates: {
+    canonical: "https://acdomusaffitti.it/valutazione-gratuita",
+  },
 };
 
 const WHATSAPP_NUMBER = "393286824515";

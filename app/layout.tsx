@@ -13,9 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://acdomusaffitti.it"),
   title: "AC Domus Affitti - Gestione affitti brevi Roma",
   description:
     "Gestione affitti brevi a Roma. Aumento del rendimento garantito: da €1.000 a €2.200 netti al mese. Analisi gratuita del tuo immobile. Contattami ora.",
+  alternates: {
+    canonical: "https://acdomusaffitti.it",
+  },
 };
 
 export default function RootLayout({

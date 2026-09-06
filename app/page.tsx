@@ -4,6 +4,9 @@ export const metadata = {
   title: "Gestione affitti brevi Roma | AC Domus Affitti",
   description:
     "Gestione professionale affitti brevi a Roma. Massimizziamo il rendimento del tuo immobile con strategie avanzate e pricing dinamico.",
+  alternates: {
+    canonical: "https://acdomusaffitti.it",
+  },
 };
 export default function LandingPage() {
   const services = [
