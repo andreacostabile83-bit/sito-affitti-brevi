@@ -34,7 +34,8 @@ export default function TrackedCtaLink({
     | "click_whatsapp"
     | "click_richiedi_analisi"
     | "click_cta_analisi"
-    | "click_whatsapp_analisi";
+    | "click_whatsapp_analisi"
+    | "click_consulenza";
   ctaLocation: string;
   source?: string;
   className?: string;

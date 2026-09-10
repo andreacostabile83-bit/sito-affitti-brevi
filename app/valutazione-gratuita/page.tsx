@@ -11,6 +11,8 @@ export const metadata = {
 };
 
 const WHATSAPP_NUMBER = "393286824515";
+const CONSULENZA_LINK =
+  "https://buy.stripe.com/bJefZif4v72k4xMgeYfEk00?client_reference_id=landing-valutazione-gratuita";
 
 function waLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -417,6 +419,41 @@ export default function ValutazioneGratuitaPage() {
                 {item}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONSULENZA — per chi vuole gestire da solo */}
+      <section className="border-b border-neutral-200 bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-12 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold sm:text-4xl">
+              Vuoi gestire da solo?
+            </h2>
+            <p className="mt-4 leading-7 text-neutral-600">
+              Se non vuoi affidarti a un gestore ma vuoi capire come
+              migliorare il tuo Airbnb o da dove partire, puoi prenotare
+              una consulenza strategica individuale di 45 minuti.
+            </p>
+            <p className="mt-4 leading-7 text-neutral-600">
+              Analizziamo il tuo caso concreto, individuiamo le criticità
+              principali e definiamo le prossime azioni. Non è una promessa
+              di rendimento: sono metodo e priorità operative su cui
+              lavorare in autonomia.
+            </p>
+          </div>
+          <div className="mt-8">
+            <TrackedCtaLink
+              href={CONSULENZA_LINK}
+              event="click_consulenza"
+              ctaLocation="valutazione_consulenza_section"
+              source="landing-valutazione-gratuita"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-2xl bg-amber-600 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:opacity-90"
+            >
+              Prenota la consulenza strategica — 45 minuti, 100€
+            </TrackedCtaLink>
           </div>
         </div>
       </section>
