@@ -3,7 +3,7 @@ import TrackedCtaLink from "./components/TrackedCtaLink";
 export const metadata = {
   title: "Gestione affitti brevi Roma | AC Domus Affitti",
   description:
-    "Gestione professionale affitti brevi a Roma. Massimizziamo il rendimento del tuo immobile con strategie avanzate e pricing dinamico.",
+    "Gestione professionale affitti brevi a Roma. Confronto reale tra locazione tradizionale e affitto breve, senza promesse di rendimento.",
   alternates: {
     canonical: "https://acdomusaffitti.it",
   },
@@ -75,7 +75,7 @@ export default function LandingPage() {
       city: "Roma",
       initials: "AB",
       avatarClass: "bg-amber-400 text-white",
-      text: "Avevo un appartamento affittato a €1.000 al mese. Andrea si è occupato di tutto: strategia, annuncio, pricing e gestione. Nel primo mese ho guadagnato €2.200 netti. Non avrei mai pensato fosse possibile.",
+      text: "Avevo un appartamento affittato a €1.000 al mese. Andrea si è occupato di tutto: strategia, annuncio, pricing e gestione. Prima di partire mi ha mostrato uno scenario prudente e uno ottimistico, e il primo mese è andato meglio di quanto immaginassi. Consiglio a chi ha dei dubbi di farsi fare due conti veri prima di decidere.",
     },
     {
       name: "Sonia B.",
@@ -108,6 +108,14 @@ export default function LandingPage() {
     },
   ];
 
+  const notForYou = [
+    "Cerchi un rendimento garantito indipendentemente dall'immobile",
+    "Non hai ancora il consenso di tutti i comproprietari",
+    "L'immobile richiede verifiche tecniche o documentali non ancora fatte",
+    "Vuoi mantenere tu tutta la gestione quotidiana ma non hai tempo operativo",
+    "Cerchi solo una stima automatica senza fornire dati sull'immobile",
+  ];
+
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
@@ -123,8 +131,7 @@ export default function LandingPage() {
                 AC Domus Affitti
               </p>
               <p className="text-sm text-neutral-500 sm:text-base">
-                Gestione affitti brevi:aumenta il rendimento del tuo immobile.
-
+                Gestione affitti brevi a Roma. Analisi reali, non promesse.
               </p>
             </div>
           </div>
@@ -161,11 +168,11 @@ export default function LandingPage() {
               </p>
 
               <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Gestione affitti brevi a Roma: aumenta il rendimento del tuo immobile
+                Gestione affitti brevi a Roma: capiamo insieme quanto rende davvero
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
-                Offro gestione affitti brevi per proprietari che vogliono aumentare il rendimento del proprio immobile con strategie professionali, pricing dinamico e ottimizzazione completa degli annunci. Gestione diretta a Roma, consulenza e gestione online per tutta Italia.
+                Gestisco affitti brevi per proprietari che vogliono un confronto onesto tra locazione tradizionale e affitto breve, con dati reali e gestione professionale. Gestione diretta a Roma, consulenza per tutta Italia.
               </p>
 
               <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-600">
@@ -524,7 +531,7 @@ export default function LandingPage() {
                     Ho iniziato dal basso. Davvero. Due anni fa ho acquistato il mio primo appartamento in una zona periferica di Roma. Ho fatto le pulizie con le mie mani, i check-in di persona, imparato ogni dettaglio dall’interno. Piano piano ho automatizzato tutto: self check-in, messaggi automatici, pulizie esternalizzate.
                   </p>
                   <p className="mt-4 leading-7 text-neutral-600">
-                    Oggi gestisco tre immobili a Roma. Per un proprietario ho trasformato un contratto da €1.000/mese in €2.200 netti — solo nel primo mese.
+                    Oggi gestisco tre immobili a Roma. Per un proprietario, il passaggio da locazione tradizionale (€1.000/mese) ad affitto breve gestito ha prodotto un risultato netto superiore nel primo mese completo: i dettagli del caso sono nella pagina di analisi gratuita.
                   </p>
                   <p className="mt-4 leading-7 text-neutral-600">
                     Non offro consulenze teoriche. Conosco questo lavoro perché l’ho fatto, l’ho insegnato e continuo a farlo ogni giorno.
@@ -677,6 +684,30 @@ export default function LandingPage() {
               >
                 <h3 className="text-lg font-semibold">{faq.q}</h3>
                 <p className="mt-3 leading-7 text-neutral-600">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-neutral-200 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
+              Trasparenza
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+              Questa analisi potrebbe non fare per te se
+            </h2>
+          </div>
+
+          <div className="mt-8 grid gap-3">
+            {notForYou.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700"
+              >
+                {item}
               </div>
             ))}
           </div>

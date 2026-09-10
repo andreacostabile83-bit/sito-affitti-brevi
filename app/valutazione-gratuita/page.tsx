@@ -81,6 +81,14 @@ export default function ValutazioneGratuitaPage() {
     },
   ];
 
+  const notForYou = [
+    "Cerchi un rendimento garantito indipendentemente dall'immobile",
+    "Non hai ancora il consenso di tutti i comproprietari",
+    "L'immobile richiede verifiche tecniche o documentali non ancora fatte",
+    "Vuoi mantenere tu tutta la gestione quotidiana ma non hai tempo operativo",
+    "Cerchi solo una stima automatica senza fornire dati sull'immobile",
+  ];
+
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <header className="border-b border-neutral-200 bg-white">
@@ -137,6 +145,10 @@ export default function ValutazioneGratuitaPage() {
                   Scrivimi su WhatsApp
                 </TrackedCtaLink>
               </div>
+
+              <p className="mt-4 text-sm text-neutral-500">
+                Dopo la richiesta ti faccio 3-4 domande su zona, metratura e situazione dell'immobile. Se il caso è adatto, preparo un confronto tra locazione tradizionale e affitto breve.
+              </p>
             </div>
 
             <div className="overflow-hidden rounded-3xl border border-neutral-200 shadow-sm">
@@ -381,6 +393,28 @@ export default function ValutazioneGratuitaPage() {
               >
                 <h3 className="text-lg font-semibold">{faq.q}</h3>
                 <p className="mt-3 leading-7 text-neutral-600">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NON FA PER TE SE */}
+      <section className="border-b border-neutral-200 bg-neutral-50">
+        <div className="mx-auto max-w-5xl px-6 py-12 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold sm:text-4xl">
+              Questa analisi potrebbe non fare per te se
+            </h2>
+          </div>
+
+          <div className="mt-8 grid gap-3">
+            {notForYou.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-sm text-neutral-700"
+              >
+                {item}
               </div>
             ))}
           </div>
