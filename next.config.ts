@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   // serverless su Vercel (funziona in locale, ma manca in produzione).
   outputFileTracingIncludes: {
     "/api/leads": ["./assets/**/*"],
+    "/api/guide-download": ["./assets/**/*"],
   },
 };
 

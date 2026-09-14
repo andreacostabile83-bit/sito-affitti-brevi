@@ -1,4 +1,5 @@
 import TrackedCtaLink from "./components/TrackedCtaLink";
+import GuideDownloadForm from "./components/GuideDownloadForm";
 
 export const metadata = {
   title: "Gestione affitti brevi Roma | AC Domus Affitti",
@@ -725,15 +726,7 @@ export default function LandingPage() {
               />
             </div>
 
-            <iframe
-              src="https://ae25f9b0.sibforms.com/serve/MUIFAIemlKvXEy5QAX1JY-cqOBzGlSbxTqdQSTErPcyA3JZsxZywvD5NWxnuvElAJWh_qjbqeuSFDqe4gezIfFNu-JnBNvav--t2QfKu0WLbwyjXrMNnYobSgaatdsFyZrWeyX9fF2yatai_3tATi9Hw5x0k17qeVG1Y_qzpctP0VYndeIVfIGFp6yZUqKTAhwC-bQJgUdMagdPAMQ=="
-              width="100%"
-              height="400"
-              frameBorder="0"
-              scrolling="auto"
-              allowFullScreen
-              className="rounded-2xl"
-            />
+            <GuideDownloadForm />
           </div>
         </div>
       </section>

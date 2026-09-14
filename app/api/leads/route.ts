@@ -1,18 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import path from "path";
+import { sanitizeText, escapeHtml, getClientIp, createRateLimiter } from "@/lib/http-utils";
+import { sendGuideEmail } from "@/lib/guide-email";
 
 export const runtime = "nodejs";
-
-const GUIDE_PDF_PATH = path.join(process.cwd(), "assets", "guida-gratuita-affitti-brevi.pdf");
-let cachedGuideBase64: string | null = null;
-
-async function getGuideBase64(): Promise<string> {
-  if (cachedGuideBase64) return cachedGuideBase64;
-  const buffer = await readFile(GUIDE_PDF_PATH);
-  cachedGuideBase64 = buffer.toString("base64");
-  return cachedGuideBase64;
-}
 
 const PROPERTY_TYPES = ["Monolocale", "Bilocale", "Trilocale", "Quadrilocale", "Altro"];
 
@@ -38,48 +28,7 @@ const MAX_LENGTHS = {
   pageUrl: 500,
 } as const;
 
-// Rate limiting in-memory, per istanza del processo: sufficiente come primo
-// filtro contro invii ripetuti automatizzati, non garantisce un limite
-// globale su deployment serverless con più istanze attive in parallelo.
-const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
-const RATE_LIMIT_MAX_REQUESTS = 5;
-const requestLog = new Map<string, number[]>();
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const timestamps = (requestLog.get(ip) ?? []).filter(
-    (t) => now - t < RATE_LIMIT_WINDOW_MS
-  );
-  timestamps.push(now);
-  requestLog.set(ip, timestamps);
-  return timestamps.length > RATE_LIMIT_MAX_REQUESTS;
-}
-
-function getClientIp(request: NextRequest): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-  return request.headers.get("x-real-ip") ?? "unknown";
-}
-
-function sanitizeText(value: unknown, maxLength: number): string {
-  if (typeof value !== "string") return "";
-  let cleaned = "";
-  for (let i = 0; i < value.length; i++) {
-    const code = value.charCodeAt(i);
-    if (code < 32 || code === 127) continue;
-    cleaned += value[i];
-  }
-  return cleaned.trim().slice(0, maxLength);
-}
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
+const isRateLimited = createRateLimiter(10 * 60 * 1000, 5);
 
 type LeadPayload = {
   fullName: string;
@@ -244,66 +193,6 @@ async function sendLeadEmail(clean: ReturnType<typeof validate>["clean"], utm: {
   return true;
 }
 
-async function sendGuideEmail(clean: ReturnType<typeof validate>["clean"]) {
-  const apiKey = process.env.BREVO_API_KEY;
-  if (!apiKey) {
-    console.error(
-      "BREVO_API_KEY non configurata: impossibile inviare la guida gratuita al lead."
-    );
-    return false;
-  }
-
-  const fromEmail = process.env.LEAD_FROM_EMAIL || "andrea.costabile83@gmail.com";
-  const fromName = process.env.LEAD_FROM_NAME || "AC Domus Affitti";
-  const firstName = clean.fullName.split(/\s+/)[0] || clean.fullName;
-
-  let guideBase64: string;
-  try {
-    guideBase64 = await getGuideBase64();
-  } catch (err) {
-    console.error("Impossibile leggere il PDF della guida gratuita:", err);
-    return false;
-  }
-
-  const htmlContent = `
-    <p>Ciao ${escapeHtml(firstName)},</p>
-    <p>grazie per aver richiesto l'analisi gratuita del tuo immobile su AC Domus Affitti.
-    In allegato trovi la guida gratuita agli affitti brevi, mentre analizzo le informazioni
-    che mi hai inviato.</p>
-    <p>Ti ricontatterò personalmente il prima possibile per parlare del tuo immobile.</p>
-    <p>A presto,<br/>Andrea Costabile<br/>AC Domus Affitti</p>
-  `;
-
-  const res = await fetch("https://api.brevo.com/v3/smtp/email", {
-    method: "POST",
-    headers: {
-      "api-key": apiKey,
-      "Content-Type": "application/json",
-      accept: "application/json",
-    },
-    body: JSON.stringify({
-      sender: { name: fromName, email: fromEmail },
-      to: [{ email: clean.email, name: clean.fullName }],
-      subject: "La tua guida gratuita agli affitti brevi – AC Domus Affitti",
-      htmlContent,
-      attachment: [
-        {
-          content: guideBase64,
-          name: "Guida Gratuita Affitti Brevi.pdf",
-        },
-      ],
-    }),
-  });
-
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    console.error("Invio guida gratuita al lead fallito:", res.status, text);
-    return false;
-  }
-
-  return true;
-}
-
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request);
   if (isRateLimited(ip)) {
@@ -352,7 +241,7 @@ export async function POST(request: NextRequest) {
   // va comunque atteso prima di rispondere: su un runtime serverless la
   // funzione può essere sospesa subito dopo l'invio della risposta, quindi
   // una promise "fire and forget" rischierebbe di non completarsi mai.
-  await sendGuideEmail(clean).catch((err) =>
+  await sendGuideEmail({ email: clean.email, name: clean.fullName }).catch((err) =>
     console.error("Errore invio guida gratuita al lead:", err)
   );
 
