@@ -715,7 +715,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="border-y border-neutral-200 bg-white">
+      <section id="ebook" className="scroll-mt-24 border-y border-neutral-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div className="flex justify-center">
